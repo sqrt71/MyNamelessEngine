@@ -4,7 +4,6 @@ using SharpDX;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,7 +26,7 @@ namespace Scripts.BehaviorTree
 
         public override object CreateMemoryObject()
         {
-            return new BTTask_MoveTo_Memory();
+            return base.CreateMemoryObject();
         }
 
 
@@ -37,22 +36,15 @@ namespace Scripts.BehaviorTree
 
             var movementComponent = owner.Components.GetComponent<MovementComponent>();
 
-            var mem = nodeMemory as BTTask_MoveTo_Memory;
-
-            mem.targetPos = Position;
+            Vector3 targetPos = Position;
             if (UseBlackboardValue)
             {
                 btComponent.blackboard.TryGetValue(BlackboardKey, out Object obj);
                 if (obj is Vector3)
                 {
-                    mem.targetPos = (Vector3)obj;
+                    targetPos = (Vector3)obj;
                 }
 
-            }
-
-            if ((mem.targetPos - owner.GetTransform().Position).Length() < AcceptanceRadius)
-            {
-                return TaskStateEnum.Succeded;
             }
 
             if (movementComponent == null)
@@ -60,7 +52,7 @@ namespace Scripts.BehaviorTree
                 return TaskStateEnum.Failed;
             }
 
-            if (!movementComponent.MoveTo(mem.targetPos))
+            if (!movementComponent.MoveTo(targetPos))
             {
                 return TaskStateEnum.Failed;
             }
@@ -70,30 +62,17 @@ namespace Scripts.BehaviorTree
 
         public override void TickTask(BehaviorTreeComponent btComponent, object nodeMemory, float deltaTime)
         {
-            var mem = nodeMemory as BTTask_MoveTo_Memory;
-
-            Vector3 delta = btComponent.GetOwner().GetTransform().Position - mem.targetPos;
+            Vector3 delta = btComponent.GetOwner().GetTransform().Position - Position;
+            delta.Y = 0.0f;
             float distToTarget = delta.Length();
-
-            Actor owner = btComponent.GetOwner();
-            var movementComponent = owner.Components.GetComponent<MovementComponent>();
-
             if (distToTarget < AcceptanceRadius)
             {
-                
+                Actor owner = btComponent.GetOwner();
+                var movementComponent = owner.Components.GetComponent<MovementComponent>();
                 movementComponent.StopMoveTo();
 
                 FinishLatentTask(btComponent, TaskStateEnum.Succeded);
             }
-            else if (!movementComponent.IsFollowingNavPath())
-            {
-                FinishLatentTask(btComponent, TaskStateEnum.Failed);
-            }
         }
-    }
-    
-    class BTTask_MoveTo_Memory
-    {
-        public Vector3 targetPos;
     }
 }

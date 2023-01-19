@@ -40,9 +40,6 @@ namespace Scripts.Components
         [MethodImpl(MethodImplOptions.InternalCall)]
         private static extern void InternalStopMoveTo(IntPtr handle);
 
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private static extern bool InternalIsFollowingNavPath(IntPtr handle);
-
         public void Jump(Vector3 direction)
         {
             InternalJump(CppInstance, direction);
@@ -81,11 +78,6 @@ namespace Scripts.Components
         public void StopMoveTo()
         {
             InternalStopMoveTo(CppInstance);
-        }
-
-        public bool IsFollowingNavPath()
-        {
-            return InternalIsFollowingNavPath(CppInstance);
         }
     }
 }

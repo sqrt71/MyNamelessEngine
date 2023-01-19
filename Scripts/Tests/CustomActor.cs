@@ -15,6 +15,11 @@ namespace Scripts.Tests
         {
         }
 
+        protected internal override void RegisterComponents()
+        {
+            AddComponent<RigidBodyCubeComponent>();
+        }
+
         public override void Update(float deltaTime)
         {
             _transform = GetTransform();
@@ -41,7 +46,7 @@ namespace Scripts.Tests
         {
             _transform = GetTransform();
 
-            var physics = Components.GetComponent<RigidBodyComponent>();
+            var physics = Components.GetComponent<RigidBodyCubeComponent>();
  
             if (physics != null)
             {

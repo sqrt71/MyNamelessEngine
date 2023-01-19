@@ -7,6 +7,7 @@
                     "data": {
                         "mass": 0.0,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -16,13 +17,13 @@
                                 0.0
                             ],
                             "rot": [
-                                -0.0,
+                                0.0,
                                 0.0,
                                 -0.0,
                                 1.0
                             ],
                             "scale": [
-                                55.95087432861328,
+                                32.590972900390625,
                                 0.49999985098838806,
                                 44.48611068725586
                             ]
@@ -106,6 +107,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -175,6 +177,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -244,6 +247,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -313,6 +317,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -382,6 +387,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -451,6 +457,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -520,6 +527,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -589,6 +597,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -658,6 +667,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -727,6 +737,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -796,6 +807,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -865,6 +877,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -934,6 +947,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1003,6 +1017,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1072,6 +1087,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1141,6 +1157,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1210,6 +1227,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1279,6 +1297,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1348,6 +1367,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1417,6 +1437,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1486,6 +1507,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1555,6 +1577,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1624,6 +1647,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1693,6 +1717,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1762,6 +1787,7 @@
                     "data": {
                         "mass": 0.10000000149011612,
                         "name": "",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -1831,6 +1857,7 @@
                     "data": {
                         "mass": 0.0,
                         "name": "1694145759360",
+                        "need_physics": false,
                         "physics_simulation": false,
                         "shape_type": 0,
                         "transform": {
@@ -1986,14 +2013,14 @@
                         "name": "MovementComponent",
                         "transform": {
                             "pos": [
-                                5.427910327911377,
-                                -0.018179714679718018,
-                                4.5493011474609375
+                                0.0,
+                                3.0,
+                                0.0
                             ],
                             "rot": [
-                                -0.0,
                                 0.0,
-                                -0.0,
+                                0.0,
+                                0.0,
                                 1.0
                             ],
                             "scale": [
@@ -2202,6 +2229,7 @@
                     "data": {
                         "mass": 0.0,
                         "name": "RigidBodyCube",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -2275,6 +2303,7 @@
                     "data": {
                         "mass": 1.0,
                         "name": "RigidBodyCube",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -2348,6 +2377,7 @@
                     "data": {
                         "mass": 0.0,
                         "name": "RigidBodyCube",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -2421,6 +2451,7 @@
                     "data": {
                         "mass": 0.0,
                         "name": "RigidBodyCube",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -2494,6 +2525,7 @@
                     "data": {
                         "mass": 1.0,
                         "name": "RigidBodyCube",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -2567,6 +2599,7 @@
                     "data": {
                         "mass": 1.0,
                         "name": "RigidBodyCube",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -2640,6 +2673,7 @@
                     "data": {
                         "mass": 1.0,
                         "name": "RigidBodyCube",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -2713,6 +2747,7 @@
                     "data": {
                         "mass": 1.0,
                         "name": "RigidBodyCube",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -2786,6 +2821,7 @@
                     "data": {
                         "mass": 1.0,
                         "name": "RigidBodyCube",
+                        "need_physics": false,
                         "physics_simulation": true,
                         "shape_type": 0,
                         "transform": {
@@ -2852,126 +2888,6 @@
                 "namespace": "Scripts.BasicScene"
             },
             "name": "Copy of Copy of "
-        },
-        {
-            "components": [
-                {
-                    "data": {
-                        "name": "2515439370192",
-                        "transform": {
-                            "pos": [
-                                -7.1581220626831055,
-                                2.9477436542510986,
-                                0.8253735303878784
-                            ],
-                            "rot": [
-                                0.0,
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "scale": [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        }
-                    },
-                    "id": "e6bc202f-4b49-4f73-aa9b-30d2f0ace521",
-                    "name": "MovementComponent"
-                },
-                {
-                    "data": {
-                        "mat_ambient": 0.10000000149011612,
-                        "mat_diffuse": 0.800000011920929,
-                        "mat_specular": 0.5,
-                        "mat_specular_exp": 1.0,
-                        "mesh_path": "../Assets/box.fbx/Cube",
-                        "name": "Mesh Renderer",
-                        "normal_path": "",
-                        "texture_path": "",
-                        "transform": {
-                            "pos": [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            "rot": [
-                                0.0,
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "scale": [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        }
-                    },
-                    "id": "534d8401-5590-462b-90ca-85d3af5cd2e2",
-                    "name": "StaticMeshRenderer",
-                    "parent": "e6bc202f-4b49-4f73-aa9b-30d2f0ace521"
-                },
-                {
-                    "data": {
-                        "name": "2345815932496",
-                        "transform": {
-                            "pos": [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            "rot": [
-                                -0.0,
-                                0.0,
-                                -0.0,
-                                1.0
-                            ],
-                            "scale": [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        }
-                    },
-                    "id": "aea8ee1c-4c72-4ea3-b368-3b672df56680",
-                    "name": "MovementComponent",
-                    "parent": "e6bc202f-4b49-4f73-aa9b-30d2f0ace521"
-                },
-                {
-                    "data": {
-                        "name": "2345815932496",
-                        "transform": {
-                            "pos": [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            "rot": [
-                                0.0,
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "scale": [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        }
-                    },
-                    "id": "7b209f05-9dfe-4258-b33d-2f22ea1a5295",
-                    "name": "MovementComponent",
-                    "parent": "e6bc202f-4b49-4f73-aa9b-30d2f0ace521"
-                }
-            ],
-            "id": "d7eed7b2-3271-4c59-b365-34d6f5c4f046",
-            "mono": {
-                "class": "AITestActor",
-                "namespace": "Scripts.Tests"
-            },
-            "name": ""
         }
     ],
     "dirlight": {

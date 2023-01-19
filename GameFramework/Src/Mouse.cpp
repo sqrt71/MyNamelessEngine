@@ -6,7 +6,6 @@
 #include "DisplayWin32.h"
 #include "Game.h"
 #include "MonoSystem.h"
-#include "ImGuiSubsystem.h"
 
 
 void Mouse::ProcessMessage(UINT message, WPARAM wParam, LPARAM lParam)
@@ -49,20 +48,8 @@ void Mouse::ProcessMessage(UINT message, WPARAM wParam, LPARAM lParam)
         const int posY = GET_Y_LPARAM(lParam);
         deltaX = (prevX - posX) / static_cast<float>(disp->GetClientWidth());
         deltaY = (prevY - posY) / static_cast<float>(disp->GetClientHeight());
-		if (Game::GetInstance()->GetShowMouseCursor())
-		{
-			prevX = posX;
-			prevY = posY;
-		}
-		else 
-		{
-			Vector2 vc = ImGuiSubsystem::GetInstance()->GetViewportScreenCenter();
-			POINT p{ static_cast<int>(vc.x), static_cast<int>(vc.y) };
-			SetCursorPos(p.x, p.y);
-			ScreenToClient(disp->GetWindowHandle(), &p);
-			prevX = p.x;
-			prevY = p.y;
-		}
+        prevX = posX;
+        prevY = posY;
         return;
     }
     case WM_XBUTTONDOWN:

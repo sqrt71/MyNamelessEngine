@@ -47,7 +47,6 @@
     <Compile Include="BehaviorTree\BTTask_MoveAwayFromPlayer.cs" />
     <Compile Include="BehaviorTree\BTTask_MoveTo.cs" />
     <Compile Include="BehaviorTree\BTTask_RandomMove.cs" />
-    <Compile Include="BehaviorTree\BTTask_UpdateBlackboardWithPlayerPosition.cs" />
     <Compile Include="BehaviorTree\BTTask_Wait.cs" />
     <Compile Include="BehaviorTree\BTTree.cs" />
     <Compile Include="BehaviorTree\BehaviorTreeEditor.cs" />
@@ -67,6 +66,8 @@
     <Compile Include="Components\MeshRendererComponent.cs" />
     <Compile Include="Components\MovementComponent.cs" />
     <Compile Include="Components\RigidBodyComponent.cs" />
+    <Compile Include="Components\RigidBodyCubeComponent.cs" />
+    <Compile Include="Components\RigidBodySphereComponent.cs" />
     <Compile Include="Components\StaticMeshRenderer.cs" />
     <Compile Include="Engine\Actor.cs" />
     <Compile Include="Engine\ComponentsEnum.cs" />

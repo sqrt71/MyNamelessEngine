@@ -54,7 +54,8 @@ void ComponentRegistry::Register(ComponentType type, const std::string& name, Fa
 void ComponentRegistry::Init()
 {
 	Register(SceneComponentType, "SceneComponent", &SceneComponent::Create);
-	Register(RigidBodyComponentType, "RigidBodyComponent", &RigidBodyComponent::Create);
+	Register(RigidBodySphereType, "RigidBodySphereComponent", &RigidBodyComponent::Create);
+	Register(RigidBodyCubeType, "RigidBodyCubeComponent", &RigidBodyComponent::Create);
 	Register(StaticMeshRendererType, "StaticMeshRenderer", &StaticMeshRenderer::Create);
 	Register(LightPointType, "PointLight", &PointLight::Create);
 	//TODO: remove mesh renderer once it's useless

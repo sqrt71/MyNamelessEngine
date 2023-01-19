@@ -8,8 +8,6 @@
 
 #include "MonoObjects/MonoPhysicsComponent.h"
 
-#include <memory>
-
 enum class RigidBodyType
 {
 	STATIC,
@@ -63,7 +61,7 @@ public:
 
 	void SetCollisionShapeType(CollisionShapeType type);
 
-	void SetCollisionShape(CollisionShapeType type);
+	void SetCollisionShape(CollisionShapeType type, Vector3 scale);
 
 	void SetLinearVelocity(btVector3 velocity);
 
@@ -86,7 +84,7 @@ public:
 	json Serialize() const override;
 	void Deserialize(const json* in) override;
 
-	auto EnablePhysicsSimulation(const bool force = false) -> void;
+	auto EnablePhysicsSimulation() -> void;
 	auto DisablePhysicsSimulation() -> void;
 
 	static Component* Create()
@@ -95,7 +93,7 @@ public:
 	}
 
 protected:
-	std::unique_ptr<btCollisionShape> Shape{};
+	btCollisionShape* Shape;
 	btScalar Mass;
 	btTransform PhysicsTransform;
 
@@ -114,20 +112,17 @@ protected:
 	RigidBodyType rbType;
 
 	bool isPhysicsSimulationEnabled = false;
+	bool simulationNeedsEnabling = false;
 
 public:
 	// todo: do we need this?
 	bool is_kinematic = false;
 
+
+	auto SetPhysicsSimulation() -> void;
 	auto applyCentralImpulse(const Vector3& impulse) -> void {
 		rigidBody.Body->applyCentralImpulse(btVector3(impulse.x, impulse.y, impulse.z));
 	}
-
-	auto Reinit() -> void;
-
-private:
-
-	auto Deinit() -> void;
 };
 
 

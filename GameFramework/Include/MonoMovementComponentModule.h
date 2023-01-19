@@ -15,7 +15,6 @@ public:
         mono_add_internal_call("Scripts.Components.MovementComponent::InternalCanJump", &CanJump);
         mono_add_internal_call("Scripts.Components.MovementComponent::InternalMoveTo", &MoveTo);
         mono_add_internal_call("Scripts.Components.MovementComponent::InternalStopMoveTo", &StopMoveTo);
-		mono_add_internal_call("Scripts.Components.MovementComponent::InternalIsFollowingNavPath", &IsFollowingNavPath);
         
     }
 
@@ -34,6 +33,4 @@ private:
 
 	static bool MoveTo(MovementComponent* component, Vector3 moveToPosition) { return component->TryMoveTo(moveToPosition); }
 	static void StopMoveTo(MovementComponent* component) { component->StopMoveTo(); }
-	static bool IsFollowingNavPath(MovementComponent* component) { return component->IsFollowingNavPath(); }
-
 };

@@ -8,7 +8,8 @@ enum ComponentType
 
     MeshRendererType = 1,
     StaticMeshRendererType,
-    RigidBodyComponentType, 
+    RigidBodyCubeType, 
+    RigidBodySphereType,
     LightPointType,
     SceneComponentType,
     MovementComponentType,

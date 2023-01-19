@@ -270,9 +270,6 @@ private:
 
 	bool bUseEditorCamera = true;
 	bool doDebugRender = false;
-	
-	// applies only to playing state
-	bool bShowMouseCursor = false;
 
 public:
 	auto GetAssetManager() const -> AssetManager* { return assetManager.get(); }
@@ -287,10 +284,5 @@ public:
 	auto LoadGameFacade() -> void;
 
 	auto GetTasksJson() const -> json;
-
-	// applies only to playing state
-	auto GetShowMouseCursor() const -> bool { return bShowMouseCursor || mPlayState != PlayState::Playing; }
-
-	auto SetShowMouseCursor(bool InShow) -> void { bShowMouseCursor = InShow; }
 };
 
