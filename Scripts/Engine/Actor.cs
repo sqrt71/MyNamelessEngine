@@ -25,6 +25,9 @@ namespace Scripts
         [MethodImpl(MethodImplOptions.InternalCall)]
         private static extern void InternalDestroy(IntPtr cppInstance);
 
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        private static extern void InternalSetShowMouseCursor(IntPtr cppInstance, bool InShow);
+
         public Actor()
         {
         }
@@ -94,11 +97,8 @@ namespace Scripts
             Component component = default;
             switch (type)
             {
-                case ComponentType.RigidBodyCubeType:
-                    component = new RigidBodyCubeComponent(this, internalCreate);
-                    break;
-                case ComponentType.RigidBodySphereType:
-                    component = new RigidBodySphereComponent(this, internalCreate);
+                case ComponentType.RigidBodyType:
+                    component = new RigidBodyComponent(this, internalCreate);
                     break;
                 case ComponentType.MovementComponentType:
                     component = new MovementComponent(this, internalCreate);
@@ -164,5 +164,11 @@ namespace Scripts
         {
             Init();
         }
+
+        public void SetShowMouseCursor(bool InShow)
+        {
+            InternalSetShowMouseCursor(CppInstance, InShow);
+        }
+
     }
 }
