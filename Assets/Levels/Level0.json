@@ -73,6 +73,67 @@
                 "class": "Floor",
                 "namespace": "Scripts.BasicScene"
             },
+            "name": "Actor0"
+        },
+        {
+            "components": [
+                {
+                    "data": {
+                        "name": "MovementComponent",
+                        "transform": {
+                            "pos": [
+                                -0.6507402658462524,
+                                3.64156436920166,
+                                -2.0250537395477295
+                            ],
+                            "rot": [
+                                -0.0,
+                                0.0,
+                                -0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "b24919c1-f7bd-48a7-ac21-4bdcb4d45fa0",
+                    "name": "MovementComponent"
+                },
+                {
+                    "data": {
+                        "name": "CameraComponent",
+                        "transform": {
+                            "pos": [
+                                -3.0,
+                                12.0,
+                                9.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "a6d0aeb9-e3f5-41fb-8c95-043bf92087b1",
+                    "name": "CameraComponent",
+                    "parent": "b24919c1-f7bd-48a7-ac21-4bdcb4d45fa0"
+                }
+            ],
+            "id": "92079bb2-33f4-4d9d-9953-b54ba91f4f50",
+            "mono": {
+                "class": "PlayahActor",
+                "namespace": "Scripts.Tests"
+            },
             "name": ""
         }
     ],

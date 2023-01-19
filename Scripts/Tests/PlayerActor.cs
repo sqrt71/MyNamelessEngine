@@ -1,23 +1,34 @@
-﻿using Scripts.Components;
+﻿using System;
+using Scripts.Components;
 using Scripts.Engine;
+using Scripts.Extensions;
 using SharpDX;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Scripts.Tests
 {
-    public class Game1PlayerActor : Actor
+    internal class PlayerActor : Actor
     {
-        private MovementComponent mv_cmp_player1;
-        private CameraComponent camComp_player1;
+        private MovementComponent mv_cmp;
+        private CameraComponent camComp;
+        private StaticMeshRenderer staticMesh;
+        public PlayerActor() {
+           
+        }
+
+        protected internal override void RegisterComponents()
+        {
+            //add components here
+        }
+
         protected internal override void Init()
         {
-            mv_cmp_player1 = AddComponent<MovementComponent>("MovementComponent");
-            camComp_player1 = AddComponent<CameraComponent>("CameraComponent");
+            mv_cmp = AddComponent<MovementComponent>("MovementComponent");
+            camComp = AddComponent<CameraComponent>("CameraComponent");
+
+            staticMesh = AddComponent<StaticMeshRenderer>("StaticMeshRenderer");
+            staticMesh.SetMeshPath("../Assets/box.fbx/Cube");
         }
+
         private bool isJumpPressed = false;
         private float characterSpeed = 10.0f;
         private Vector3 jumpDirection = new Vector3(0, 10, 0);
@@ -47,9 +58,9 @@ namespace Scripts.Tests
         public override void Update(float deltaTime)
         {
             var inputHandler = Game.GetInstance().InputHandler;
-            if (inputHandler.IsKeyDown(Keys.Space) && mv_cmp_player1.CanJump())
+            if (inputHandler.IsKeyDown(Keys.Space) && mv_cmp.CanJump())
             {
-                if (!isJumpPressed) { mv_cmp_player1.Jump(jumpDirection + movementDelta * characterSpeed * jumpSpeadModifier); }
+                if (!isJumpPressed) { mv_cmp.Jump(jumpDirection + movementDelta * characterSpeed * jumpSpeadModifier); }
                 isJumpPressed = true;
             }
             else
@@ -71,8 +82,8 @@ namespace Scripts.Tests
 
 
 
-            float deltaX = camComp_player1.GetMouseDeltaX();
-            float deltaY = camComp_player1.GetMouseDeltaY();
+            float deltaX = camComp.GetMouseDeltaX();
+            float deltaY = camComp.GetMouseDeltaY();
             // TODO: use mouse data when it has been added to C#
             //inputHandler.GetMouse()->GetDeltas(deltaX, deltaY);
             //if (inputHandler.IsKeyDown(Keys.Left))
@@ -116,11 +127,11 @@ namespace Scripts.Tests
             Vector3 camMod = cameraOffset;
             camMod -= cameraOffset.Z * forward;
             camMod += cameraOffset.X * right;
-            camComp_player1.SetCameraTransform(pos, rot);
+            camComp.SetCameraTransform(pos, rot);
 
             //Walking
             movementDelta = new Vector3(0, 0, 0);
-
+            
 
             float forwardInput = 0.0f;
             float rightInput = 0.0f;
@@ -146,9 +157,9 @@ namespace Scripts.Tests
             movementDelta += right * rightInput;
             movementDelta -= forward * forwardInput;
 
-            if (!mv_cmp_player1.CanJump()) movementDelta *= airControlModifier;
+            if (!mv_cmp.CanJump()) movementDelta *= airControlModifier;
 
-            mv_cmp_player1.SetWalkDirection(movementDelta);
+            mv_cmp.SetWalkDirection(movementDelta);
 
         }
 
@@ -165,7 +176,7 @@ namespace Scripts.Tests
             t.Position += bulletOffset.X * right;
             bullet.SetTransform(t);
 
-
+           
 
             bullet.SetInittialSpeed(moveMat.Forward * bulletSpeed);
 
@@ -176,7 +187,7 @@ namespace Scripts.Tests
 
         public override void OnBeginPlay()
         {
-
+            
         }
 
         public override void SetTransform(Transform transform)
@@ -187,7 +198,7 @@ namespace Scripts.Tests
         protected override void Overlap(Actor otherActor)
         {
             //otherActor.Components.GetComponent<StaticMeshRenderer>().SetMeshPath("../Assets/Meshes/test.fbx/Torus");
-            Console.WriteLine("PlayahActor Overlap event");
+            Console.WriteLine("PlayerActor Overlap event");
         }
 
     }
