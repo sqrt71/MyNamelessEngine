@@ -1,0 +1,576 @@
+{
+    "AssetType": "Level",
+    "actors": [
+        {
+            "components": [
+                {
+                    "data": {
+                        "mass": 0.0,
+                        "name": "",
+                        "need_physics": false,
+                        "physics_simulation": true,
+                        "shape_type": 0,
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                -0.5,
+                                0.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                7.5,
+                                0.5,
+                                30.0
+                            ]
+                        },
+                        "type": 0,
+                        "usage": 2
+                    },
+                    "id": "ad377087-8c4c-492e-87a5-a671aeece930",
+                    "name": "RigidBodyCubeComponent"
+                },
+                {
+                    "data": {
+                        "mat_ambient": 0.10000000149011612,
+                        "mat_diffuse": 0.800000011920929,
+                        "mat_specular": 0.5,
+                        "mat_specular_exp": 1.0,
+                        "mesh_path": "../Assets/box.fbx/Cube",
+                        "name": "",
+                        "normal_path": "",
+                        "texture_path": "",
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "c2956bff-22fc-4a39-ace6-27bcfbb93c16",
+                    "name": "StaticMeshRenderer",
+                    "parent": "ad377087-8c4c-492e-87a5-a671aeece930"
+                },
+                {
+                    "data": {
+                        "channel_id": -1,
+                        "is_3d": true,
+                        "loop": true,
+                        "name": "../Assets/test.wav",
+                        "stream": false,
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "2c4448fe-2a25-4797-b4e6-7aba440e8f3f",
+                    "name": "AudioComponent",
+                    "parent": "ad377087-8c4c-492e-87a5-a671aeece930"
+                }
+            ],
+            "id": "9a63640d-d8da-404f-9f23-6e7eb81b4bc6",
+            "name": "Floor1"
+        },
+        {
+            "components": [
+                {
+                    "data": {
+                        "name": "MovementComponent",
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                1.0,
+                                12.0
+                            ],
+                            "rot": [
+                                -0.0,
+                                0.0,
+                                -0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "07e3f54f-a3a6-4bae-ae99-6e86eef146c0",
+                    "name": "MovementComponent"
+                },
+                {
+                    "data": {
+                        "name": "CameraComponent",
+                        "transform": {
+                            "pos": [
+                                -3.0,
+                                12.0,
+                                9.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "a56f910d-ee34-465e-8474-90f4961402ee",
+                    "name": "CameraComponent",
+                    "parent": "07e3f54f-a3a6-4bae-ae99-6e86eef146c0"
+                },
+                {
+                    "data": {
+                        "mat_ambient": 0.10000000149011612,
+                        "mat_diffuse": 0.800000011920929,
+                        "mat_specular": 0.5,
+                        "mat_specular_exp": 1.0,
+                        "mesh_path": "../Assets/box.fbx/Cube",
+                        "name": "StaticMeshRenderer",
+                        "normal_path": "",
+                        "texture_path": "",
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "db68ee0f-3c5e-41ef-a624-dadf98b8235a",
+                    "name": "StaticMeshRenderer",
+                    "parent": "07e3f54f-a3a6-4bae-ae99-6e86eef146c0"
+                }
+            ],
+            "id": "82313977-c1ca-4024-a017-c54206e2a0d3",
+            "mono": {
+                "class": "PlayerActor",
+                "namespace": "Scripts.Tests"
+            },
+            "name": "Player"
+        },
+        {
+            "components": [
+                {
+                    "data": {
+                        "mass": 0.0,
+                        "name": "",
+                        "need_physics": false,
+                        "physics_simulation": true,
+                        "shape_type": 0,
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                -0.5,
+                                -27.5
+                            ],
+                            "rot": [
+                                -0.0,
+                                0.0,
+                                -0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                7.5,
+                                0.5,
+                                15.0
+                            ]
+                        },
+                        "type": 0,
+                        "usage": 2
+                    },
+                    "id": "ad377087-8c4c-492e-87a5-a671aeece930",
+                    "name": "RigidBodyCubeComponent"
+                },
+                {
+                    "data": {
+                        "mat_ambient": 0.10000000149011612,
+                        "mat_diffuse": 0.800000011920929,
+                        "mat_specular": 0.5,
+                        "mat_specular_exp": 1.0,
+                        "mesh_path": "../Assets/box.fbx/Cube",
+                        "name": "",
+                        "normal_path": "",
+                        "texture_path": "",
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "c2956bff-22fc-4a39-ace6-27bcfbb93c16",
+                    "name": "StaticMeshRenderer",
+                    "parent": "ad377087-8c4c-492e-87a5-a671aeece930"
+                },
+                {
+                    "data": {
+                        "channel_id": -1,
+                        "is_3d": true,
+                        "loop": true,
+                        "name": "../Assets/test.wav",
+                        "stream": false,
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "2c4448fe-2a25-4797-b4e6-7aba440e8f3f",
+                    "name": "AudioComponent",
+                    "parent": "ad377087-8c4c-492e-87a5-a671aeece930"
+                }
+            ],
+            "id": "3031071f-f56a-4d67-99d6-7af942c6e991",
+            "name": "Floor2"
+        },
+        {
+            "components": [
+                {
+                    "data": {
+                        "mass": 0.0,
+                        "name": "",
+                        "need_physics": false,
+                        "physics_simulation": true,
+                        "shape_type": 0,
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                -0.5,
+                                -50.0
+                            ],
+                            "rot": [
+                                -0.0,
+                                0.0,
+                                -0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                7.5,
+                                0.5,
+                                20.0
+                            ]
+                        },
+                        "type": 0,
+                        "usage": 2
+                    },
+                    "id": "ad377087-8c4c-492e-87a5-a671aeece930",
+                    "name": "RigidBodyCubeComponent"
+                },
+                {
+                    "data": {
+                        "mat_ambient": 0.10000000149011612,
+                        "mat_diffuse": 0.800000011920929,
+                        "mat_specular": 0.5,
+                        "mat_specular_exp": 1.0,
+                        "mesh_path": "../Assets/box.fbx/Cube",
+                        "name": "",
+                        "normal_path": "",
+                        "texture_path": "",
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "c2956bff-22fc-4a39-ace6-27bcfbb93c16",
+                    "name": "StaticMeshRenderer",
+                    "parent": "ad377087-8c4c-492e-87a5-a671aeece930"
+                },
+                {
+                    "data": {
+                        "channel_id": -1,
+                        "is_3d": true,
+                        "loop": true,
+                        "name": "../Assets/test.wav",
+                        "stream": false,
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "2c4448fe-2a25-4797-b4e6-7aba440e8f3f",
+                    "name": "AudioComponent",
+                    "parent": "ad377087-8c4c-492e-87a5-a671aeece930"
+                }
+            ],
+            "id": "33cddc3b-20c3-41e7-8036-d75f0157093b",
+            "name": "Floor3"
+        },
+        {
+            "components": [
+                {
+                    "data": {
+                        "mass": 0.0,
+                        "name": "",
+                        "need_physics": false,
+                        "physics_simulation": true,
+                        "shape_type": 0,
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                2.25,
+                                -7.0
+                            ],
+                            "rot": [
+                                -0.0,
+                                0.0,
+                                -0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                7.5,
+                                5.0,
+                                1.0
+                            ]
+                        },
+                        "type": 0,
+                        "usage": 2
+                    },
+                    "id": "a06cc6b3-11b8-47fa-a7b2-9c134c7a2c21",
+                    "name": "RigidBodyCubeComponent"
+                },
+                {
+                    "data": {
+                        "mat_ambient": 0.10000000149011612,
+                        "mat_diffuse": 0.800000011920929,
+                        "mat_specular": 0.5,
+                        "mat_specular_exp": 1.0,
+                        "mesh_path": "../Assets/box.fbx/Cube",
+                        "name": "",
+                        "normal_path": "",
+                        "texture_path": "",
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "6a11a5cb-5282-4ab4-8ff8-c4bcc7b97366",
+                    "name": "StaticMeshRenderer",
+                    "parent": "a06cc6b3-11b8-47fa-a7b2-9c134c7a2c21"
+                }
+            ],
+            "id": "ecc4f51d-99bf-4f30-b3ec-8ac40e4e2eda",
+            "name": ""
+        },
+        {
+            "components": [
+                {
+                    "data": {
+                        "mass": 0.0,
+                        "name": "RigidBodyCubeComponent",
+                        "need_physics": false,
+                        "physics_simulation": false,
+                        "shape_type": 0,
+                        "transform": {
+                            "pos": [
+                                -0.04296135902404785,
+                                0.8909978270530701,
+                                -4.550299644470215
+                            ],
+                            "rot": [
+                                -0.0,
+                                0.0,
+                                -0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        "type": 1,
+                        "usage": 2
+                    },
+                    "id": "34206297-478c-4209-9d3f-dab80b1813a1",
+                    "name": "RigidBodyCubeComponent"
+                },
+                {
+                    "data": {
+                        "mat_ambient": 0.10000000149011612,
+                        "mat_diffuse": 0.800000011920929,
+                        "mat_specular": 0.5,
+                        "mat_specular_exp": 1.0,
+                        "mesh_path": "../Assets/box.fbx/Cube",
+                        "name": "StaticMeshRenderer",
+                        "normal_path": "",
+                        "texture_path": "",
+                        "transform": {
+                            "pos": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rot": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    },
+                    "id": "bbaec78d-ac9f-4483-a8dd-a7f7f47599b0",
+                    "name": "StaticMeshRenderer",
+                    "parent": "34206297-478c-4209-9d3f-dab80b1813a1"
+                }
+            ],
+            "id": "8fef085d-134e-4789-8a01-4ad5c1835916",
+            "mono": {
+                "class": "dWall",
+                "namespace": "Scripts.Tests"
+            },
+            "name": ""
+        }
+    ],
+    "dirlight": {
+        "Intensity": 1.0,
+        "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+        ],
+        "direction": [
+            0.0,
+            -1.0,
+            -7.748603820800781e-07
+        ],
+        "name": "",
+        "transform": {
+            "pos": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rot": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        }
+    }
+}
